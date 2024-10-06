@@ -32,15 +32,10 @@ class SeismicEventPredictor(nn.Module):
     def __init__(self, autoencoder):
         super(SeismicEventPredictor, self).__init__()
         self.encoder = autoencoder.encoder
-        self.fc1 = nn.Linear(64 * 92, 64 * 92 * 4)  # Adjust dimensions based on encoder output
-        self.fc2 = nn.Linear(64 * 92 * 4, )  # Adjust dimensions based on encoder output
         self.fc = nn.Linear(64 * 92, 1)  # Adjust dimensions based on encoder output
-        self.activation = nn.ReLU()
 
     def forward(self, x):
         encoded = self.encoder(x)
         encoded = encoded.view(encoded.size(0), -1)  # Flatten
-        # x = self.activation(self.fc1(encoded))
-        # output = self.fc2(x)
         output = self.fc(x)
         return output
