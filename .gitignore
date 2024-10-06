@@ -1,0 +1,17 @@
+data/*
+!data/lunar/
+!data/lunar/
+data/lunar/*
+!data/lunar/training/
+data/lunar/training/*
+!data/lunar/training/data/
+!data/lunar/training/data/S12_GradeA/
+!data/lunar/training/data/S12_GradeA/*
+
+checkpoints/*
+!checkpoints/CNNAutoencoder
+checkpoints/CNNAutoencoder/*
+!checkpoints/CNNAutoencoder/model_epoch_10.pth
+!checkpoints/SeismicEventPredictor
+checkpoints/SeismicEventPredictor/*
+!checkpoints/SeismicEventPredictor/model_epoch_10.pth

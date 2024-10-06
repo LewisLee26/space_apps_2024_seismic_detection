@@ -1,0 +1,16 @@
+name: seismic-detection
+channels:
+  - pytorch
+  - conda-forge
+  - defaults
+dependencies:
+  - python
+  - obspy
+  - scipy
+  - pandas
+  - numpy
+  - matplotlib
+  - pytorch 
+  - torchvision  
+  - scikit-learn
+  - future
